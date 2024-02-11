@@ -1,0 +1,14 @@
+body {
+  position: relative;
+}
+.Modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 10rem;
+  background: white;
+}
+.colour-options {
+  display: flex;
+}

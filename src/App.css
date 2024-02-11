@@ -1,0 +1,9 @@
+.App {
+  display: flex;
+}
+.Group {
+  flex: 1;
+}
+.Notes {
+  flex: 3;
+}

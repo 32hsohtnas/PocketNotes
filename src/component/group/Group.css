@@ -1,0 +1,30 @@
+.Group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+}
+.add-group-btn {
+  position: absolute;
+  z-index: 100;
+  right: 1rem;
+  bottom: 0;
+  font-size: 5rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: darkblue;
+  background: darkblue;
+  color: white;
+}
+.group-list > ul {
+  list-style: none;
+}
+.group-list > ul > li {
+  display: flex;
+  gap: 4rem;
+}
+.profile-pic {
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+}

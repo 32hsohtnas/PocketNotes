@@ -1,0 +1,54 @@
+.default-notes {
+  background: lightsteelblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 20rem;
+  padding-right: 20rem; */
+  position: relative;
+}
+.default-notes-img {
+  width: 40rem;
+  height: 20rem;
+}
+.default-notes-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+
+.default-notes-text > p {
+  font-size: 2rem;
+}
+.default-notes-text > h1 {
+  font-size: 4;
+}
+.footer {
+  display: flex;
+  position: absolute;
+  bottom: 0rem;
+
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer > img {
+  width: 1rem;
+  height: 1rem;
+}
+.footer > p {
+  font-size: 1rem;
+}
+
+.user-notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header-notes {
+  display: flex;
+}
