@@ -15,18 +15,14 @@ function Group({ groups, selectedGroup, setSelectedGroup, modal, setModal }) {
         <ul>
           {groups.map((group) => {
             return (
-              <li
-                onClick={handleNotes}
-                className={group.name}
-                key={group.profileName}
-              >
+              <li onClick={handleNotes} className={group.name} key={group.name}>
                 <h1
                   style={{ background: group.colour }}
                   className="profile-pic"
                 >
                   {group.profileName}
                 </h1>
-                <h1>{group.name}</h1>
+                <h1 className="group-name">{group.name}</h1>
               </li>
             );
           })}

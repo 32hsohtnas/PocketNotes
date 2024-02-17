@@ -3,13 +3,20 @@
   flex-direction: column;
   position: relative;
   height: 100vh;
+  align-items: flex-start;
+}
+.Group > h1 {
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
 }
 .add-group-btn {
   position: absolute;
   z-index: 100;
-  right: 1rem;
-  bottom: 0;
-  font-size: 5rem;
+  right: 2rem;
+  bottom: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2.8rem;
   border-radius: 50%;
   border-style: solid;
   border-color: darkblue;
@@ -21,10 +28,8 @@
 }
 .group-list > ul > li {
   display: flex;
-  gap: 4rem;
-}
-.profile-pic {
-  border-radius: 50%;
-  border-style: solid;
-  border-color: black;
+  cursor: pointer;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: -1rem;
 }

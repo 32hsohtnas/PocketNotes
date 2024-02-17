@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "./Notes.css";
 import notes from "../../assets/notes-preview.png";
 import encrypted from "../../assets/encrypted.png";
+import addNotes from "../../assets/add-notes.png";
 
 function Notes({ groups, selectedGroup, setGroups }) {
   function handleNotes() {
@@ -9,39 +10,69 @@ function Notes({ groups, selectedGroup, setGroups }) {
     console.log(res);
     const userInput = useRef(null);
     function handleAddNotes() {
-      if (userInput.current.value)
+      if (userInput.current.value) {
+        const date = new Date();
+        const formattedDate = date
+          .toLocaleString("en-US", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true,
+          })
+          .replace(",", " ");
+
         setGroups((prevGroups) => {
           const updatedGroups = prevGroups.map((group) =>
             group.name === selectedGroup
-              ? { ...group, notes: [...group.notes, userInput.current.value] }
+              ? {
+                  ...group,
+                  notes: [...group.notes, userInput.current.value],
+                  date: formattedDate,
+                }
               : group
           );
           localStorage.setItem("groups", JSON.stringify(updatedGroups));
           userInput.current.value = "";
           return updatedGroups;
         });
+      }
     }
     return (
       <div className="user-notes">
         <div className="header-notes">
-          <h1>{res.name}</h1>
-          <h1>{res.name}</h1>
+          {/* <h1>{res.name}</h1>
+          <h1>{res.name}</h1> */}
+          <h1 style={{ background: res.colour }} className="profile-pic">
+            {res.profileName}
+          </h1>
+          <h1 className="group-name">{res.name}</h1>
         </div>
         <div className="content-notes">
-          {res.notes.map((note) => {
-            return <p>{note}</p>;
+          {res.notes.map((note, index) => {
+            return (
+              <div key={index}>
+                {" "}
+                <p className="actual-notes">{note}</p>{" "}
+                <p className="date-notes">{res.date}</p>{" "}
+              </div>
+            );
           })}
-
-          <p>{res.date}</p>
         </div>
-        <textarea
-          ref={userInput}
-          name="note"
-          id=""
-          cols="30"
-          rows="10"
-        ></textarea>
-        <button onClick={handleAddNotes}>Add Notes</button>
+        <div className="text-area">
+          <textarea
+            className="text-box"
+            ref={userInput}
+            name="note"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button className="add-notes-btn" onClick={handleAddNotes}>
+            <img src={addNotes} alt="" />
+          </button>
+        </div>
       </div>
     );
   }
