@@ -4,16 +4,22 @@
   position: relative;
   height: 100vh;
   align-items: flex-start;
+  width: 100%;
 }
 .Group > h1 {
-  padding-left: 4.5rem;
-  padding-right: 4.5rem;
+  position: sticky;
+  top: 0rem;
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  z-index: 100;
+  background: white;
 }
 .add-group-btn {
-  position: absolute;
+  position: fixed;
   z-index: 100;
-  right: 2rem;
   bottom: 3rem;
+  left: 15rem;
   width: 3.5rem;
   height: 3.5rem;
   font-size: 2.8rem;
@@ -23,13 +29,46 @@
   background: darkblue;
   color: white;
 }
+
 .group-list > ul {
   list-style: none;
+  width: 100%;
+  padding: 0; /* Remove default padding */
+  margin: 0;
 }
 .group-list > ul > li {
   display: flex;
   cursor: pointer;
   align-items: center;
   gap: 1.5rem;
-  margin-bottom: -1rem;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
+  width: 100%;
+
+  padding-left: 2rem;
+}
+
+.selected {
+  background: lightgray;
+  width: 100%;
+}
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .Group {
+    width: 100%;
+    height: 100%;
+    padding: 0 0;
+    margin: 0 0;
+    padding-left: 2rem;
+    overflow-x: hidden;
+  }
+
+  .add-group-btn {
+    position: fixed;
+    right: 8rem;
+    bottom: 2rem;
+  }
 }

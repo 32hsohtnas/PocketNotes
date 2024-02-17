@@ -2,36 +2,32 @@
   background: lightsteelblue;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  /* padding-left: 20rem;
-  padding-right: 20rem; */
+
   position: relative;
   height: 100vh;
 }
 .default-notes-img {
-  width: 40rem;
-  height: 20rem;
+  padding-top: 30vh;
+  width: 20rem;
+  height: 10rem;
 }
 .default-notes-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.1rem;
+  text-align: center;
 }
 
 .default-notes-text > p {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .default-notes-text > h1 {
   font-size: 4;
 }
+
 .footer {
   display: flex;
   position: absolute;
   bottom: 0rem;
-
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
@@ -84,25 +80,46 @@
   color: black;
   margin: 1rem 1rem;
   position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 .date-notes {
   position: absolute;
   bottom: 0.1rem;
-  right: 4rem;
+  right: 1rem;
   z-index: 100;
+  font-size: 1rem;
 }
 .text-box {
   position: relative;
   display: flex;
   width: 100%;
+  font-size: 1.5rem;
 }
 .add-notes-btn {
   position: fixed;
-  bottom: 4rem;
+  bottom: 3rem;
   right: 4rem;
   width: 0.5rem;
   height: 0.5rem;
   border: none;
   cursor: pointer;
+}
+
+.actual-notes {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+
+  white-space: pre-line;
+}
+.hidden {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .Notes {
+    width: 100vw;
+    height: 100vh;
+  }
 }

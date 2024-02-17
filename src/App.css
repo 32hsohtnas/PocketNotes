@@ -1,11 +1,20 @@
 .App {
   display: flex;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  font-family: sans-serif;
 }
 .Group {
   flex: 1;
+  margin: 0px 0px;
+  padding: 0px 0px;
 }
 .Notes {
   flex: 3;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  height: 100vh;
+  width: 100%;
 }
 .profile-pic {
   border-radius: 50%;
@@ -24,4 +33,14 @@
 .group-name {
   font-weight: bold;
   font-size: 1.5rem;
+}
+.blur {
+  filter: blur(0.8px);
+}
+
+@media only screen and (max-width: 800px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
 }
